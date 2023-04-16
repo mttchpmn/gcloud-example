@@ -1,6 +1,10 @@
+using Google.Cloud.Diagnostics.Common;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddGoogleDiagnostics();
+builder.Logging.AddGoogle();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
