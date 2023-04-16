@@ -9,6 +9,7 @@ steps:
       - gcloud-example
       - '-f'
       - gcloud-example/Dockerfile
+      - "."
     id: Build
   - name: gcr.io/cloud-builders/docker
     args:
