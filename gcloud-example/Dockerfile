@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["gcloud-example.csproj", "gcloud-example/"]
+COPY ["gcloud-example/gcloud-example.csproj", "gcloud-example/"]
 RUN dotnet restore "gcloud-example/gcloud-example.csproj"
 COPY . .
 WORKDIR "/src/gcloud-example"
